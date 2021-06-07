@@ -1,11 +1,11 @@
 process.env.NODE_ENV = 'test';
 
 let mongoose = require('mongoose');
-let Book = require('../app/models/book');
+let User = require('../models/user');
 
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let server = require('../server');
+let server = require('../local');
 let should = chai.should();
 
 
@@ -13,7 +13,7 @@ chai.use(chaiHttp);
 
 describe('User', () => {
     beforeEach((done) => {
-        Book.remove({}, (err) => {
+        User.remove({}, (err) => {
            done();
         });
     });

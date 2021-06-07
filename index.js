@@ -22,11 +22,4 @@ app.use((req, res, next) => {
 dbConnection();
 router(app);
 
-const port = process.env.PORT || 2500;
-
-const server = app.listen(port, () => {
-        console.log(`Server running at http://localhost:${port}/`);
-    }
-);
-
-module.exports = server;
+module.exports = app;

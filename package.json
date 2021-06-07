@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node local.js",
+    "dev": "nodemon local.js",
+    "deploy": "serverless deploy"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.922.0",
-    "bcrypt": "^5.0.1",
+    "aws-serverless-express": "^3.4.0",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
-    "mocha": "^8.4.0"
+    "mocha": "^8.4.0",
+    "serverless": "^2.44.0"
   }
 }
